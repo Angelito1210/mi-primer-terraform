@@ -1,0 +1,4 @@
+resource "local_file" "bienvenida" {
+  content  = "Confirmado: He instalado Terraform y estoy a un paso de aprender más para mi carrera profesional"
+  filename = "exito.txt"
+}
