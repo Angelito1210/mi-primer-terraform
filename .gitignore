@@ -1,2 +1,14 @@
+# Terraform
 .terraform/
-*.tfstate*
+*.tfstate
+*.tfstate.*
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
+*.tfvars.json
+crash.log
+*.log
+
+# Editor
+.vscode/
+.idea/
