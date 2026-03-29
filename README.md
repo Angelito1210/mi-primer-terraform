@@ -1,21 +1,30 @@
-# Terraform Basics - Mi Primer Proyecto IaC
+# Mi Primer Proyecto Real con Terraform en AWS
 
-Proyecto práctico de **Infrastructure as Code** con Terraform.
+Proyecto práctico de **Infrastructure as Code (IaC)** donde despliego una página web estática en un bucket de S3 usando Terraform.
 
 ## Qué he hecho
-- Instalación y configuración de Terraform en Ubuntu (WSL2).
-- Creación de un recurso local con el provider `local_file`.
-- Uso completo del ciclo de vida: `terraform init`, `plan`, `apply` y `destroy`.
-- Buenas prácticas: `.gitignore` correcto y documentación clara.
+- Creación de un bucket S3 con Terraform.
+- Configuración de hosting estático (website configuration).
+- Política pública para que la web sea accesible.
+- Subida automática del archivo `index.html` al bucket.
+- Limpieza completa del entorno con `terraform destroy`.
 
-## Tecnologías
+## Tecnologías utilizadas
 - Terraform (v1.9+)
-- Local provider
+- AWS S3 + Static Website Hosting
+- Provider AWS + random_string
 
 ## Cómo ejecutarlo
 
 ```bash
-terraform init          # Instala providers
-terraform plan          # Muestra qué va a hacer
-terraform apply -auto-approve   # Crea el archivo
-terraform destroy -auto-approve # Limpia todo
+# 1. Inicializar Terraform
+terraform init
+
+# 2. Ver qué va a crear
+terraform plan
+
+# 3. Desplegar
+terraform apply -auto-approve
+
+# 4. (Opcional) Limpiar todo cuando termine
+terraform destroy -auto-approve
